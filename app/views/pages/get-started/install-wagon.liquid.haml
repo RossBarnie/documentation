@@ -325,23 +325,29 @@ position: 3
       RVM installs blah blah blah...
       $ source /home/your_user_name/.rvm/scripts/rvm</span></pre>
 
-      We recommend Ruby version 2.0.0, which you can now install by running <code>rvm install ruby-2.0.0</code>.  For more information on using RVM, see <code>rvm usage</code> or <code>man rvm</code>.
+      We recommend Ruby version 2.0.0, which you can now install using one of the following:
+      
+      - **RVM**: <code>rvm install ruby-2.0.0</code>
+      - **rbenv**: <code>rbenv install 2.0.0</code>
+      
+      For more information on using RVM, see <code>rvm usage</code> or <code>man rvm</code>.
+      For more information on rbenv, see [rbenv](https://github.com/sstephenson/rbenv) or <code>rbenv help</code>. To install the <code>rbenv install</code> command you must first install the [ruby-build](https://github.com/sstephenson/ruby-build) plugin.
 
       ## Step 3: Install Bundler and Rake
       Wagon has two more dependencies: [Bundler](http://bundler.io/) and [Rake](http://rake.rubyforge.org/), both of which are ruby gems. [Gems](http://www.rubygems.org) are a packaging system for Ruby. You can install gems using the <code>gem install</code> command, as shown below.
 
       <pre><span>$ gem install bundler
-      Fetching: bundler-1.5.3.gem (100%)
-      Successfully installed bundler-1.5.3
-      Parsing documentation for bundler-1.5.3
-      Installing ri documentation for bundler-1.5.3
+      Fetching: bundler-1.7.3.gem (100%)
+      Successfully installed bundler-1.7.3
+      Parsing documentation for bundler-1.7.3
+      Installing ri documentation for bundler-1.7.3
       1 gem installed</span></pre>
 
       <pre><span>$ gem install rake
-      Fetching: rake-10.1.1.gem (100%)
-      Successfully installed rake-10.1.1
-      Parsing documentation for rake-10.1.1
-      Installing ri documentation for rake-10.1.1
+      Fetching: rake-10.3.2.gem (100%)
+      Successfully installed rake-10.3.2
+      Parsing documentation for rake-10.3.2
+      Installing ri documentation for rake-10.3.2
       1 gem installed</span></pre>
 
       ## Step 4: Install Wagon
@@ -349,7 +355,7 @@ position: 3
 
       <pre><span>$ gem install locomotivecms_wagon</span></pre>
 
-      Once it finishes, check that wagon installed correctly by running the <code>wagon version</code> command.
+      Once it finishes, check that wagon installed correctly by running the <code>wagon version</code> command. Not that if you use rbenv, you may have to run <code>rbenv rehash</code> at this point.
 
       <pre><span>$ wagon version
       1.5.0</span></pre>
